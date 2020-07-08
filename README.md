@@ -6,7 +6,7 @@ Python library for the spectroscopic identification of plastic particulates in R
 import polypython as pp
 ```
 ## Spectral normalisation
-The three spectral normalisation equations include max, area, interval, and standard normal variate (SNV). All spectral images should be loaded in .txt format with rows representing Raman spectrums and columns being the Raman shifts (cm-1). The four normalisation codes can be called using the following:
+The four spectral normalisation equations include max, area, interval, and standard normal variate (SNV). All spectral images should be loaded in .txt format with rows representing Raman spectrums and columns being the Raman shifts (cm-1). The four normalisation codes can be called using the following:
 
 ```python
 data = pp.norm(data, mode='snv')
@@ -16,7 +16,7 @@ data = pp.norm(data, mode='01')
 ```
 
 ## xy pixel estimation
-An x and y pixel number can be estimated from the spectral data number using prime factorisation by running the following code on your Raman data set:
+An x and y pixel number can be estimated from the spectrum number using prime factorisation by running the following code:
 ```python
 #data shape: [Raman spectrum number, Raman shifts (cm-1)
 xy = pp.xy(data)
@@ -40,5 +40,5 @@ The polyrsi function can be used to identify the presence of plastic related spe
 pp.polyrsi(data,xy,location)
 ```
 
-If you decide to use such a module to analyse your Raman spectral images, please reference the following academic paper: https://doi.org/10.1021/acs.analchem.9b05445.
+If you decide to use Polypython to analyse your Raman spectral images, please reference this academic journal: https://doi.org/10.1021/acs.analchem.9b05445.
 
