@@ -1,5 +1,5 @@
 # polypython
-Python library for the spectroscopic identification of plastic particulates in Raman spectral images. This python library consists of four spectral normalisation equations, a x and y pixel dimension estimator and spectral image analysis function. Load the polypython library using the following:
+Python library for the spectroscopic identification of plastic particulates in Raman spectral images. This python library consists of four spectral normalisation equations, a x and y pixel dimension estimator and a spectral image analysis function. Load the polypython library using the following:
 
 ```python
 * pip install polypython
