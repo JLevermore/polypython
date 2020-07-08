@@ -1,25 +1,25 @@
 # polypython
-Python library for the spectroscopic identification of plastic particulates in Raman spectral images. This python library consists of four spectral normalisation equations, a x and y pixel dimension estimator, and spectral image analysis function. Load the polypython library using the following:
+Python library for the spectroscopic identification of plastic particulates in Raman spectral images. This python library consists of four spectral normalisation equations, a x and y pixel dimension estimator and spectral image analysis function. Load the polypython library using the following:
 
 ```python
 * pip install polypython
 import polypython as pp
 ```
 ## Spectral normalisation
-The three spectral normalisation equations include max, area, interval, and standard normal variate (SNV). All spectral images should be loaded in .txt format with rows representing Raman spectrums, and columns being the Raman shifts (cm-1). The four normalisation codes can be called using the following:
+The three spectral normalisation equations include max, area, interval, and standard normal variate (SNV). All spectral images should be loaded in .txt format with rows representing Raman spectrums and columns being the Raman shifts (cm-1). The four normalisation codes can be called using the following:
 
 ```python
-pp.snv(data)
-pp.norm(data, mode='max')
-pp.norm(data, mode='area')
-pp.norm(data, mode='01')
+data = pp.norm(data, mode='snv')
+data = pp.norm(data, mode='max')
+data = pp.norm(data, mode='area')
+data = pp.norm(data, mode='01')
 ```
 
 ## xy pixel estimation
-The x and y pixel number can be estimated from the spectral data number using prime factorisation by running the following code on your Raman data set:
+An x and y pixel number can be estimated from the spectral data number using prime factorisation by running the following code on your Raman data set:
 ```python
 #data shape: [Raman spectrum number, Raman shifts (cm-1)
-pp.xy(data)
+xy = pp.xy(data)
 ```
 
 ## File_locator
@@ -32,7 +32,7 @@ location = pp.file_locator()
 ```
 
 ## Polyrsi analysis
-The polyrsi function can be used to identify the presence of plastic related spectra in a Raman spectral image, using the following:
+The polyrsi function can be used to identify the presence of plastic related spectra in a Raman spectral image using the following:
 ```python
 #data shape: [Raman spectrum number, Raman shifts (cm-1)
 #xy: xy image pixel dimension
@@ -40,5 +40,5 @@ The polyrsi function can be used to identify the presence of plastic related spe
 pp.polyrsi(data,xy,location)
 ```
 
-If you decide to use such a module to analyse your Raman spectral images, please, reference the following academic paper: https://doi.org/10.1021/acs.analchem.9b05445.
+If you decide to use such a module to analyse your Raman spectral images, please reference the following academic paper: https://doi.org/10.1021/acs.analchem.9b05445.
 
