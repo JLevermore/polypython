@@ -39,3 +39,6 @@ The polyrsi function can be used to identify the presence of plastic related spe
 #location: file location saver
 pp.polyrsi(data,xy,location)
 ```
+
+If you decide to use such a module to analyse your Raman spectral images, please, reference the following academic paper: https://doi.org/10.1021/acs.analchem.9b05445.
+
