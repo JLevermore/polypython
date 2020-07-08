@@ -1,2 +1,2 @@
 # polypython
-Python app for analysis of Raman spectral images for plastic content. 
+Python library for the spectroscopic identification of plastic particulates in Raman spectral images. 
