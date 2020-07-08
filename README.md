@@ -27,7 +27,8 @@ To save plastic analysed spectral images in an appropriate location, the user ca
 ```python
 #data shape: [Raman spectrum number, Raman shifts (cm-1)
 location = pp.file_locator()
-Where would you like to save your data and graphs? i.e. "/home/Desktop/DataFolder"/home/Desktop/DataFolder/
+#which will print: where would you like to save your data and graphs? i.e. "/home/Desktop/DataFolder" 
+/home/Desktop/DataFolder/ #your desired file path
 ```
 
 ## Polyrsi analysis
