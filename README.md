@@ -6,7 +6,7 @@ Python library for the spectroscopic identification of plastic particulates in R
 import polypython as pp
 ```
 ## Spectral normalisation
-The three spectral normalisation questions include max, area, interval, and standard normal variate (SNV). All spectral images should be loaded in .txt format with rows representing Raman spectrums, and columns being the Raman shifts (cm-1). The four normalisation codes can be called using the following:
+The three spectral normalisation equations include max, area, interval, and standard normal variate (SNV). All spectral images should be loaded in .txt format with rows representing Raman spectrums, and columns being the Raman shifts (cm-1). The four normalisation codes can be called using the following:
 
 ```python
 pp.snv(data)
