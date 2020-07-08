@@ -9,21 +9,23 @@ import matplotlib as mpl
 import os
 
 def norm(y, mode='max'):
-    """Normalize 1d spectrum.
-    :param array y: Spectral data.
-    :param str mode: Type of normalization:
+    """Normalize 1d spectrum
+                     - 'snv' - Divide by maximum.
                      - 'max' - Divide by maximum.
                      - 'area' - Divide by sum over absolute value.
                      - '01' - Scale to interval [0, 1] by subtracting offset before dividing by maximum.
     :returns: Normalized spectrum with same shape as y.
     """
+    if mode == 'snv':
+        m,n = data.shape
+        return np.divide(np.transpose(data-np.mean(data.T)*np.ones(n)),(np.std(np.transpose(data.T)*np.ones(n))))
     if mode == 'max':
-        return y / np.amax(y)
+        return data / np.amax(data)
     if mode == '01':
-        y = y - np.amin(y)
-        return y / np.amax(y)
+        data = data - np.amin(data)
+        return data / np.amax(data)
     if mode == 'area':
-        return y / np.sum(np.absolute(y))
+        return data / np.sum(np.absolute(data))
 
 def coef(x,y):
     """pearson's correlation coefficient algorithm"""
@@ -55,12 +57,6 @@ def xy(spectra_data):
     xy = np.asarray([x,y])
     """x is first column y is second column"""
     return xy
-
-def snv(spectra):
-    """Standard normal variate transformation of Raman spectra"""
-    m,n = spectra.shape
-    snv = np.divide(np.transpose(spectra-np.mean(spectra.T)*np.ones(n)),(np.std(np.transpose(spectra.T)*np.ones(n))))
-    return snv #output shape: [Raman shift number, spectrum number]
 
 def file_locator():
     """Folder saving destination"""
