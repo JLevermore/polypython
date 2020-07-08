@@ -22,7 +22,7 @@ The x and y pixel number can be estimated from the spectral data number using pr
 pp.xy(data)
 ```
 
-## File_locator analysis
+## File_locator
 To save plastic analysed spectral images in an appropriate location, the user can define where to save the spectral images using the following:
 ```
 #data shape: [Raman spectrum number, Raman shifts (cm-1)
