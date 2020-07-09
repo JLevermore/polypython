@@ -9,12 +9,12 @@ import matplotlib as mpl
 import os
 
 def norm(y, mode='max'):
-    """Normalize 1d spectrum
+    """Normalise a spectral array using: 
                      - 'snv' - Divide by maximum.
                      - 'max' - Divide by maximum.
                      - 'area' - Divide by sum over absolute value.
                      - '01' - Scale to interval [0, 1] by subtracting offset before dividing by maximum.
-    :returns: Normalized spectra.
+    :returns: Normalised spectral array.
     """
     if mode == 'snv':
         m,n = data.shape
