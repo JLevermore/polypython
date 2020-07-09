@@ -1,5 +1,6 @@
 # polypython
 Python library for the spectroscopic identification of plastic particulates in Raman spectral images. Specifically, for Raman images collected using Renishaw inVia Raman microscope's StreamLine(TM) scanning mode with Raman shifts centred at 1300 cm-1 and ranging from 924.6 to 1668.0 cm <sup>-1</sup>. This python library consists of four spectral normalisation equations, a x and y pixel dimension estimator and a spectral image analysis function. Load the polypython library using the following:
+ <sub>subscript</sub> and <sup>superscript</sup>
 ```python
 * pip install polypython
 import polypython as pp
