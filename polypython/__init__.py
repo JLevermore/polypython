@@ -14,7 +14,7 @@ def norm(y, mode='max'):
                      - 'max' - Divide by maximum.
                      - 'area' - Divide by sum over absolute value.
                      - '01' - Scale to interval [0, 1] by subtracting offset before dividing by maximum.
-    :returns: Normalized spectrum with same shape as y.
+    :returns: Normalized spectra.
     """
     if mode == 'snv':
         m,n = data.shape
