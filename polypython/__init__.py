@@ -8,7 +8,7 @@ from scipy import ndimage
 import matplotlib as mpl
 import os
 
-def norm(y, mode='max'):
+def norm(data, mode='max'):
     """Normalise a spectral array using: 
                      - 'snv' - Divide by maximum.
                      - 'max' - Divide by maximum.
