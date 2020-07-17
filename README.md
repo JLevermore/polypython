@@ -30,6 +30,14 @@ location = pp.file_locator()
 #which will print: where would you like to save your data and graphs? i.e. "/home/Desktop/DataFolder" 
 /home/Desktop/DataFolder/ #an example of the desired file path
 ```
+## Spectral image visualisation 
+Visualisation of the unanalysed spectral image can be conducted by calling the following:
+```python
+#data shape: [Raman spectrum number, Raman shifts (cm<sup>-1</sup>)
+#xy: xy image pixel dimension
+#location: file location saver
+pp.polypython.vis(data, xy, mode='mean')
+```
 
 ## Polyrsi analysis
 The polyrsi function can be used to identify the presence of plastic related spectra in a Raman spectral image using the following:
